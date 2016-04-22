@@ -1,0 +1,10 @@
+ENV/Include
+ENV/Lib
+ENV/Scripts
+ENV/pip-selfcheck.json
+
+src/first_project/settings/password.py
+
+.idea
+ENV
+webfaction/httpd.conf

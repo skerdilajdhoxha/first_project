@@ -1,0 +1,40 @@
+{% include 'base.html' %}
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'img/django-icon.png' %}">
+    <title>{% block head_title %}About | first project{% endblock head_title %}</title>
+
+</head>
+<body>
+{% include 'navbar.html' %}
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Skerdilajd Hoxha</h1>
+            <h4>I am a Python and Django future web developer(finger crossed). This is my first project and I hope many are going to come.</h4>
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'img/django-icon.png' %}" class="img-responsive">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+

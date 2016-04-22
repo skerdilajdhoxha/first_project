@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'img/django-icon.png' %}">
+    <title>{% block head_title %}Blog | first project{% endblock head_title %}</title>
+
+</head>
+<body>
+
+
+
+{% block content %}
+
+{% include 'navbar.html' %}
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+            <h1>List of posts</h1>
+            <br>
+            <br>
+            {% for object in object_list %}
+            {% if object.published %}
+            <div class="thumbnail">
+            <h2>
+                <a href="{{ object.get_absolute_url }}">{{ object.title }}</a><br/>
+            </h2>
+            <p> {{ object.created }}</p>   <!--|timesince-->
+            <br>
+            {% if object.image %}
+            <img src="{{ object.image.url }}" class="img-responsive">
+            {% endif %}
+            <br>
+            <p>{{ object.content|linebreaks|truncatechars:120 }}<br/></p>
+            <a class="btn btn-primary" href="{{ object.get_absolute_url }}">Read More<span></a>
+            <br>
+            <br>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+
+            <div class="pagination">
+                <span class="step-links">
+                    {% if object_list.has_previous %}
+                        <a href="?page={{ object_list.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+                    </span>
+
+                    {% if object_list.has_next %}
+                        <a href="?page={{ object_list.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+        <br>
+        <br>
+        <!--<div class="col-md-4">-->
+<!--&lt;!&ndash; Blog Search Well &ndash;&gt;-->
+                <!--<div class="well">-->
+                    <!--<h4>Blog Search</h4>-->
+                    <!--<div class="input-group">-->
+                        <!--<input type="text" class="form-control" placeholder="search" name="q">-->
+                        <!--<span class="input-group-btn">-->
+                            <!--<button class="btn btn-primary" type="button">Search</button>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+             <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+</body>
+</html>
+{% endblock  %}
+
+

@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+          <img class="center-block img-responsive" src="{% static 'img/Python.png' %}" alt="Generic placeholder image" width="220" height="220">
+          <h2>Python</h2>
+          <p> Python is a widely used high-level, general-purpose, interpreted...,</p>
+          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modal">Read more</button>
+        </div>
+        <div class="col-lg-4">
+          <img class="center-block img-responsive" src="{% static 'img/django.png' %}" alt="Generic placeholder image" width="220" height="220">
+          <h2>Django</h2>
+          <p>Django is a free and open-source web framework, written...</p>
+          <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#modal1">Read more</button>
+        </div>
+        <div class="col-lg-4">
+          <img class="center-block img-esponsive" src="{% static 'img/bootstrap-logo.png' %}"  width="220" height="220">
+          <h2>Bootstrap</h2>
+          <p>Bootstrap is a free and open-source collection of tools for creating...</p>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal2">Read more</button>
+        </div>
+      </div>
+  </div>
+
+<!-- 3 modals -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+    <div class="'modal-dialog modal-lg">
+      <div class ="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modalLabel">Python</h2>
+          </div>
+          <div class="modal-body">
+          <p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than would be possible in other languages. The language provides constructs intended to enable clear programs on both a small and large scale.
+            Python supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles. It features a dynamic type system and automatic memory management and has a large and comprehensive standard library.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog">
+    <div class="'modal-dialog modal-lg">
+      <div class ="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modalLabel1">Django</h2>
+          </div>
+          <div class="modal-body">
+          <p>Django is a free and open-source web framework, written in Python, which follows the model–view–controller (MVC) architectural pattern. It is maintained by the Django Software Foundation (DSF), an independent organization established as a 501(c) non-profit.
+            Django's primary goal is to ease the creation of complex, database-driven websites. Django emphasizes reusability and "pluggability" of components, rapid development, and the principle of don't repeat yourself. Python is used throughout, even for settings, files, and data models. Django also provides an optional administrative create, read, update and delete interface that is generated dynamically through introspection and configured via admin models.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal2" tabindex="-1" role="dialog">
+    <div class="'modal-dialog modal-lg">
+      <div class ="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="modalLabel2">Bootstrap</h2>
+          </div>
+          <div class="modal-body">
+          <p>Bootstrap is a free and open-source collection of tools for creating websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. It aims to ease the development of dynamic websites and web applications.
+            Bootstrap is a front end web framework, that is, an interface for the user, unlike the server-side code which resides on the "back end" or server.</p>
+          </div>
+      </div>
+    </div>
+  </div>
