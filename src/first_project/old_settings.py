@@ -27,9 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+
+from settings.password import emailpass
+from settings.password import dbpass_local
+
+
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_HOST_USER = 'postmaster@sandbox95eeb95e779b481fbd366a9933f894ec.mailgun.org'
-EMAIL_HOST_PASSWORD = '84e180b5379c6408ca732aeca564e81c'
+EMAIL_HOST_PASSWORD = emailpass
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
@@ -94,7 +99,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'database',
         'USER': 'postgres',
-        'PASSWORD': 'eneoradohoxha',
+        'PASSWORD': dbpass_local,
         'HOST': 'localhost',
         'PORT': '5432',
     }

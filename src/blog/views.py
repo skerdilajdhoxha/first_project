@@ -29,3 +29,4 @@ def blog_detail(request, slug=None):
     return render(request, 'blog_detail.html', context)
 
 
+

@@ -34,3 +34,6 @@ class Post(models.Model):
             new_slug = "%s-%s" % (slug, qs.first().id)
             return create_slug(instance, new_slug=new_slug)
         return slug
+
+
+
