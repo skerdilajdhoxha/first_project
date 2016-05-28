@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from .password import secret_key
+from .password import emailpass
+from .password import dbpass_local
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -20,15 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&ffc^(axct4+=-(odv&73y#tw6n#i*dl@k7@7mg9beq#n=nt%y'
+SECRET_KEY = secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-from .password import emailpass
-from .password import dbpass_local
 
 EMAIL_HOST = 'smtp.mailgun.org'
 EMAIL_HOST_USER = 'postmaster@sandbox95eeb95e779b481fbd366a9933f894ec.mailgun.org'

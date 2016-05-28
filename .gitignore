@@ -8,3 +8,7 @@ src/first_project/settings/password.py
 .idea
 ENV
 webfaction/httpd.conf
+
+
+
+

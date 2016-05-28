@@ -1,9 +1,4 @@
 
-# static -- mvpland_static
-# postgresql -- mvpland
-# username -- dj_projects
-# password -- eneoradohoxha4321
-
 """
 Django settings for first_project project.
 
@@ -19,6 +14,9 @@ from django.conf import settings
 
 if not settings.DEBUG:
     import os
+    from .password import secret_key
+    from .password import emailpass
+    from .password import dbpass
 
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -28,15 +26,12 @@ if not settings.DEBUG:
     # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
     # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = '&ffc^(axct4+=-(odv&73y#tw6n#i*dl@k7@7mg9beq#n=nt%y'
+    SECRET_KEY = secret_key
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = False
 
     ALLOWED_HOSTS = ['www.myfirstproject.tk', 'myfirstproject']
-
-    from .password import emailpass
-    from .password import dbpass
 
     EMAIL_HOST = 'smtp.mailgun.org'
     EMAIL_HOST_USER = 'postmaster@sandbox95eeb95e779b481fbd366a9933f894ec.mailgun.org'
