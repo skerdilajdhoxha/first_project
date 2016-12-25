@@ -9,7 +9,7 @@ src/first_project/settings/password.py
 ENV/
 webfaction/httpd.conf
 __pycache__/
-*.pyc
+.pyc
 
 
 
