@@ -1,7 +1,3 @@
-ENV/Include
-ENV/Lib
-ENV/Scripts
-ENV/pip-selfcheck.json
 
 src/first_project/settings/password.py
 src/first_project/old_settings.py
